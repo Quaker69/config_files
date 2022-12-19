@@ -1,2 +1,6 @@
-~// this is me Quaker,its just a alise!
-~//
+**CONFIG FILES**
+'#include <stdio.h>
+int main()
+{
+  printf("myconfig\n");
+}'
