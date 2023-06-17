@@ -1,0 +1,4 @@
+Host *
+    Hostname ssh.github.com
+    Port 443
+    IdentityFile ~/.ssh/id_rsa
