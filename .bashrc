@@ -5,3 +5,4 @@ alias gp='git push'
 alias gpp='git pull'
 alias gc='git commit -m'
 alias gi='git init'
+#edit
