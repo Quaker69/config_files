@@ -1,0 +1,34 @@
+exec --no-startup-id picom -b
+
+
+# brightness
+set $brightnessmsg notify-send 'Brightness' "Brightness: $(brightnessctl get) out of $(brightnessctl max)"
+bindsym XF86MonBrightnessUp exec brightnessctl set +2%;exec $brightnessmsg
+bindsym XF86MonBrightnessDown exec brightnessctl set 2%-;exec $brightnessmsg
+
+exec --no-startup-id redshit -O 6000
+
+exec --no-startup-id redshit -O 6000
+
+exec --no-startup-id redshit -O 6000
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures/*
+
+# colour of border, background, text, indicator, and child_border
+client.focused #d12f2c #263640 #93a1a1 #696ebf #2587cc1
+client.focused_inactive #263640 #b08500 #93a1a1 #263640 #263640
+client.unfocused #263640 #b08500 #93a1a1 #263640 #263640
+client.urgent #263640 #b08500 #93a1a1 #263640 #263640
+client.placeholder #263640 #b08500 #93a1a1 #263640 #263640
+client.background #263640
+
+# window rules, you can find the window class using xprop
+for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver|virt-manager] floating enable
+for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] focus
+for_window [class=".*"] border pixel 2
+hide_edge_borders smart
+gaps inner 3
+smart_gaps on
+
+
+exec --no-startup-id xautolock -time 15 -locker 'systemctl suspend' -notify 600 -notifier 'i3lock | xset dpms force off' &
+
