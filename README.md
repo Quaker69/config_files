@@ -1,4 +1,9 @@
-**CONFIG FILES**
+# Personal Config
+
+- **zshrc**
+- **i3wm**
+- **picom**
+
 
 
 
